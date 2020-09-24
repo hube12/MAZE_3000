@@ -1,0 +1,21 @@
+Welcome to Maze 3000 !
+
+In this challenge the goal is to get back the key that solve the maze, there is 
+two ways to explore the maze, first one is using the executable and just running it 
+in a console (use at least 45lines*100columns one). The other is by providing a
+number to the executable and it will trace the maze and told you if it is the correct
+key.
+
+Currently due to linux terminal, we enabled raw mode, that might throw you off as your 
+terminal might appear unresponsive, be sure to use a compliant one, you can hit ESC at
+any time to exit the program, else just fail/win at it and it will exit.
+
+Once you reversed the key, please use the unhasher executable that unhash the hash 
+(available in the hash executable) and use this command to grep the correct flag. (might take real 0m26.811s)
+
+./unhasher <key> | grep "^Fg{.*}$" | head -n 1
+
+The format of the flag is Fg{XXX...XXXX}, the first one outputted by the unhasher executable
+is the right one (there is many collisions ;)
+
+Don't get fooled, this might look easy !
